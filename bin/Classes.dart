@@ -1,5 +1,3 @@
-import 'package:curso_2/curso_2.dart' as curso_2;
-
 void main(List<String> arguments) {
   Fruta laranjas = Fruta('Laranja', 'Laranja', 60, 'Azedo');
   Melancia melancia1 = Melancia('Melancia', 'vermelha', 1200, 'Doce', isDoce: true, 56, true);
