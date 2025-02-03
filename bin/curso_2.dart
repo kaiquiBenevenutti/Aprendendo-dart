@@ -6,14 +6,17 @@ void main(List<String> arguments) {
 
   print(laranjas.nome);
   print(melancia1.nome);
-  print(melancia1.sabor);
-  print(laranjas.sabor);
 
-  laranjas.frutaDoce(laranjas.sabor);
-  melancia1.frutaDoce(melancia1.sabor);
+  melancia1.prepararMassa();
+  melancia1.assarMassa();
+  melancia1.servirBolo();
+
+  laranjas.prepararMassa();
+  laranjas.assarMassa();
+  laranjas.servirBolo();
 }
 
-class Fruta {
+class Fruta implements Bolo {
   String nome;
   String cor;
   int peso;
@@ -31,6 +34,21 @@ class Fruta {
       print(isDoce);
     }
   }
+
+  @override
+  void prepararMassa(){
+    print('Colha todas as $nome e lave bem\n junte com os ingredientes e misture bem. ');
+  }
+
+  @override
+  void assarMassa(){
+    print('Pegue a mistura e coloque no forno.');
+  }
+
+  @override
+  void servirBolo(){
+    print('Pronto! Seu bolo de $nome esta pronto, aproveite.');
+  }
 }
 
 class Melancia extends Fruta {
@@ -41,4 +59,16 @@ class Melancia extends Fruta {
       this.isMadura,
       {bool? isDoce})
       : super(nome, cor, peso, sabor, isDoce: isDoce);
+}
+
+abstract class Bolo {
+  void prepararMassa(){
+
+  }
+  void assarMassa(){
+
+  }
+  void servirBolo(){
+
+  }
 }
