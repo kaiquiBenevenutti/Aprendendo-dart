@@ -3,12 +3,16 @@
 }
 
 escolherMeioTransporte(Transportes locomocao){
-  if(locomocao == Transportes.carro){
-    print("Vou de carro.");
-  }else if(locomocao == Transportes.bike){
-    print("Vou de bike.");
-  }else {
-    print("Nao sei como vou.");
+  switch (locomocao) {
+    case Transportes.carro:
+      print("Vou de carro.");
+      break;
+    case Transportes.bike:
+      print("Vou de bike.");
+      break;
+    default:
+      print("Não sei como vou.");
+      break;
   }
 }
 
