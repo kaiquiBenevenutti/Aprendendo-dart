@@ -1,4 +1,6 @@
-﻿void main(List<String> arguments){
+﻿import 'transporte.dart';
+
+void main(List<String> arguments){
   escolherMeioTransporte(Transportes.trem);
 }
 
@@ -14,14 +16,4 @@ escolherMeioTransporte(Transportes locomocao){
       print("Não sei como vou.");
       break;
   }
-}
-
-enum Transportes{
-  carro,
-  bike,
-  andando,
-  skate,
-  aviao,
-  patins,
-  trem
 }
